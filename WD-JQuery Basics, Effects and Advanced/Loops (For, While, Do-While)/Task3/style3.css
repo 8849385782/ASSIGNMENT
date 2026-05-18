@@ -1,0 +1,37 @@
+body{
+    font-family: system-ui, sans-serif;
+    background-color: #eef1f5;
+}
+
+.main-card{
+    width: 1200px;
+    border-radius: 20px;
+}
+
+/* Logs Box */
+.logs-box{
+    background-color: #f4f6fa;
+    border-left: 6px solid #0d6efd;
+    border-radius: 10px;
+}
+
+/* Log Text */
+#logList{
+    font-family: monospace;
+    font-size: 28px;
+    line-height: 2;
+}
+
+#logList li{
+    margin-bottom: 10px;
+}
+
+/* Success */
+.success{
+    color: green;
+}
+
+/* Error */
+.error{
+    color: #cc0000;
+}

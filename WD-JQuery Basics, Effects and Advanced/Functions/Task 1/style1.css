@@ -1,0 +1,59 @@
+body{
+
+    margin: 0;
+    padding: 0;
+
+    background-color: #eef1f5;
+
+    font-family: Arial, sans-serif;
+}
+
+/* Main Card */
+.main-card{
+
+    width: 1100px;
+
+    border-radius: 20px;
+}
+
+/* Input Box */
+input{
+
+    height: 90px;
+
+    font-size: 35px !important;
+
+    border-radius: 12px !important;
+}
+
+/* Button */
+button{
+
+    font-size: 40px !important;
+
+    border-radius: 12px !important;
+}
+
+/* Result Box */
+#resultBox{
+
+    min-height: 250px;
+
+    background-color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Greeting Text */
+#displayGreeting{
+
+    font-size: 80px;
+
+    color: #198754;
+
+    font-weight: bold;
+
+    margin: 0;
+}

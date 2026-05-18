@@ -1,0 +1,15 @@
+body{
+    background-color: #eef1f5;
+    font-family: system-ui, sans-serif;
+}
+
+/* Main Card */
+.main-card{
+    width: 1200px;
+    border-radius: 20px;  
+}
+
+/* Result Text */
+.result-text{
+    font-size: 90px;
+}

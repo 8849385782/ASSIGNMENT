@@ -1,0 +1,30 @@
+body{
+    background-color: #eef1f5;
+    font-family: system-ui, sans-serif;
+}
+
+/* Main Card */
+.main-card{
+    width: 1200px;
+    border-radius: 20px;
+}
+
+/* Number Box */
+.number-box{
+    width: 90px;
+    height: 90px;
+
+    background-color: #0d6efd;
+    color: white;
+
+    border-radius: 12px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 40px;
+    font-weight: bold;
+
+    box-shadow: 0 4px 10px rgba(13,110,253,0.3);
+}
