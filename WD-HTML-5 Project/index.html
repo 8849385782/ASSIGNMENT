@@ -1,0 +1,93 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Interaction System</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <h1>Customer Interaction System</h1>
+</header>
+
+<!-- Navigation -->
+<nav>
+  <a href="index.html" class="active">Home</a>
+  <a href="services.html">Services</a>
+  <a href="support.html">Support</a>
+  <a href="about.html">About Us</a>
+  <a href="contact.html">Contact Us</a>
+</nav>
+
+<!-- Banner -->
+<section class="banner">
+  <h2>Welcome to Complaint Registration Portal</h2>
+</section>
+
+<!-- Main Content -->
+<div class="main-container">
+
+  <!-- Complaint Form -->
+  <div class="card">
+    <h2>Complaint Registration Form</h2>
+
+    <form id="complaintForm">
+
+      <label>Full Name</label>
+      <input type="text" id="name">
+
+      <label>Phone Number</label>
+      <input type="text" id="phone">
+
+      <label>Email</label>
+      <input type="email" id="email">
+
+      <label>Vehicle</label>
+      <input type="text" id="vehicle">
+
+      <label>Complaint</label>
+      <textarea id="complaint"></textarea>
+
+      <div class="btn-group">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </div>
+
+      <p id="success"></p>
+
+    </form>
+  </div>
+
+  <!-- Complaint Table -->
+  <div class="card">
+    <h2>Submitted Complaints</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Phone</th>
+          <th>Email</th>
+          <th>Vehicle</th>
+          <th>Complaint</th>
+        </tr>
+      </thead>
+
+      <tbody id="tableBody"></tbody>
+    </table>
+
+    <p id="records"></p>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
