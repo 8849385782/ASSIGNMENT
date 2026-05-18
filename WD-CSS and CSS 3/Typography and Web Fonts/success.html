@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Ingested Successfully - The Chronicle</title>
+    <!-- Linking the clean separate CSS stylesheet -->
+    <link rel="stylesheet" href="success-style.css">
+</head>
+<body>
+
+    <!-- Upper Main Top Banner Row -->
+    <nav class="navbar">
+        <a href="index.html" class="brand-logo">THE <span>CHRONICLE</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Latest News</a></li>
+            <li><a href="upload.html" class="upload-nav-btn">⬆ Upload Blog File</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Dynamic Frame Area -->
+    <main class="container">
+        <div class="success-box">
+            <div class="success-checkmark">✔</div>
+            <h2>Blog File Published!</h2>
+            <p class="success-description">Your asset document has been fully parsed and mounted directly onto the index array stream feed:</p>
+            
+            <!-- Target parameter token generation box -->
+            <div id="receipt-filename" class="receipt-display">Loading filename log...</div>
+
+            <!-- Route navigation hyperlink CTA -->
+            <a href="index.html" class="submit-btn">View Feed Stream</a>
+        </div>
+    </main>
+
+    <!-- Base Screen Footer Layout Block -->
+    <footer class="footer">
+        <p>&copy; 2026 The Chronicle Media Group. File Processing Log Verified.</p>
+    </footer>
+
+    <!-- Parameter Extraction Script Engine -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Read incoming parameter values straight out of the active browser URL address window 
+            const urlParams = new URLSearchParams(window.location.search);
+            const fileName = urlParams.get('filename') || "Document_Package.txt";
+            
+            // Output string securely onto the target DOM layout box element
+            document.getElementById("receipt-filename").textContent = fileName;
+        });
+    </script>
+</body>
+</html>

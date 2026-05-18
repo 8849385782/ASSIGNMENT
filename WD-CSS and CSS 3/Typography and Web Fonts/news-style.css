@@ -1,0 +1,157 @@
+/* --- Global Document View Reset --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    line-height: 1.6;
+    color: #0f172a;
+    background-color: #f1f5f9;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- Upper Editorial Top Navbar --- */
+.navbar {
+    background: #0f172a;
+    color: #ffffff;
+    padding: 1.2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 4px solid #2563eb;
+}
+
+.brand-logo {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.5rem;
+    letter-spacing: -0.02em;
+}
+
+.brand-logo span { 
+    color: #3b82f6; 
+}
+
+/* --- Interactive Action Button Components --- */
+.fetch-news-btn {
+    background: #2563eb;
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
+    transition: background 0.2s, transform 0.1s;
+}
+
+.fetch-news-btn:hover {
+    background: #1d4ed8;
+}
+
+.fetch-news-btn:active {
+    transform: scale(0.98);
+}
+
+/* --- Main Layout Workspace Framework --- */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+    flex: 1;
+    width: 100%;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 12px;
+    border-bottom: 3px solid #cbd5e1;
+}
+
+.section-title {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #0f172a;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+/* --- Live Google News Card Components --- */
+.news-feed-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.news-card {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    border-left: 5px solid #2563eb;
+    border: 1px solid #e2e8f0;
+    border-left: 5px solid #2563eb;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.news-card:hover {
+    transform: translateX(4px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.06);
+}
+
+.news-card h3 {
+    font-size: 1.25rem;
+    color: #1e293b;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.news-card p {
+    color: #475569;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.news-meta-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: #64748b;
+    font-weight: 600;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 12px;
+}
+
+.news-link-btn {
+    color: #2563eb;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.news-link-btn:hover {
+    text-decoration: underline;
+}
+
+/* --- Base System Footer layout --- */
+.footer {
+    background: #0f172a;
+    color: #64748b;
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 14px;
+}

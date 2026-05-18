@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background-color: #eef3ff;
+}
+
+/* Center using margin */
+.container {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+/* CARD (border-box) */
+.card {
+  width: 300px;
+  background: white;
+  border: 2px solid #ccc;
+  padding: 20px;
+  text-align: center;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+/* PROFILE IMAGE (border-box demo) */
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid #007bff;
+  padding: 4px;
+  box-sizing: border-box;
+}
+
+/* BIO (content-box demo) */
+.bio {
+  box-sizing: content-box;
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin: 10px 0;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+/* BUTTON */
+button {
+  padding: 10px 18px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}

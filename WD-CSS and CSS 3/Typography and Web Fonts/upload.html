@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Portal - The Chronicle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="brand-logo">THE <span>CHRONICLE</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Latest News</a></li>
+            <li><a href="upload.html" class="active upload-nav-btn">⬆ Upload Blog File</a></li>
+        </ul>
+    </nav>
+
+    <main class="container" style="max-width: 650px;">
+        <div class="upload-card">
+            <h2 class="page-title">Deploy Blog File Package</h2>
+            
+            <form id="file-publishing-form">
+                <div class="file-drop-area" id="drop-zone">
+                    <div class="upload-icon">📁</div>
+                    <p class="upload-instructions" id="file-status-label">
+                        Drag & Drop your blog file here or <span>browse files</span>
+                    </p>
+                    <!-- File input tracking engine accepts raw textual formats -->
+                    <input type="file" id="blog-file-input" accept=".txt,.html,.css,.js,.json" required>
+                </div>
+
+                <button type="submit" class="submit-btn">Parse & Publish Content</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 The Chronicle Media Group. Secure File Pipeline Processing.</p>
+    </footer>
+
+    <!-- File Parsing Reader Engine Script Module -->
+    <script>
+        const fileInput = document.getElementById("blog-file-input");
+        const statusLabel = document.getElementById("file-status-label");
+        let parsedContent = "";
+        let trackedFileName = "";
+        let trackedFileSize = "";
+
+        // Track when a user selects a file via browsing or drag-and-drop
+        fileInput.addEventListener("change", (event) => {
+            const selectedFile = event.target.files[0];
+            if (!selectedFile) return;
+
+            trackedFileName = selectedFile.name;
+            // Format bytes into clean KB metric display token
+            trackedFileSize = (selectedFile.size / 1024).toFixed(1) + " KB";
+
+            // Initialize background file reading engine
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                parsedContent = e.target.result; // Saves raw file contents into string variable
+                statusLabel.innerHTML = `✅ Ready: <strong>${trackedFileName}</strong> (${trackedFileSize})`;
+            };
+            reader.readAsText(selectedFile);
+        });
+
+        // Form submission loop
+        document.getElementById("file-publishing-form").addEventListener("submit", function(e) {
+            e.preventDefault();
+            if (!parsedContent) return alert("Please select or drop a valid file first!");
+
+            // Format upload calendar tracking timestamps
+            const uploadTime = new Date().toLocaleDateString("en-US", { year: 'numeric', month: 'short', day: 'numeric' });
+
+            // Create log layout token package object
+            const blogPayload = {
+                fileName: trackedFileName,
+                fileSize: trackedFileSize,
+                fileData: parsedContent,
+                uploadDate: uploadTime
+            };
+
+            // Query current browser storage vault array, append new payload, lock back down
+            const existingBlogs = JSON.parse(localStorage.getItem("uploaded_blogs")) || [];
+            existingBlogs.push(blogPayload);
+            localStorage.setItem("uploaded_blogs", JSON.stringify(existingBlogs));
+
+            // Route user directly to success confirmation page layout
+            window.location.href = `success.html?filename=${encodeURIComponent(trackedFileName)}`;
+        });
+    </script>
+</body>
+</html>

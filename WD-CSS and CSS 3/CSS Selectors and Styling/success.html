@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Submission Confirmed</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="form-container">
+        <div class="success-icon">✔</div>
+        <h2 class="form-title">Message Sent!</h2>
+        
+        <!-- Dynamic Output Wrapper Container -->
+        <div class="receipt-box">
+            <div class="receipt-line"><strong>Name:</strong> <span id="out-name">Loading...</span></div>
+            <div class="receipt-line"><strong>Email:</strong> <span id="out-email">Loading...</span></div>
+            <div class="receipt-line"><strong>Drafted:</strong> <span id="out-msg">Loading...</span></div>
+        </div>
+
+        <a href="index.html" class="action-btn secondary-btn">Send Another Message</a>
+    </div>
+
+    <!-- Extraction Logic Script Module -->
+    <script>
+        // Extract key/value elements directly out of the browser navigation window URL
+        const urlParams = new URLSearchParams(window.location.search);
+        
+        // Match string names mapped inside your index input form tags
+        const nameData = urlParams.get('userName') || "Anonymous User";
+        const emailData = urlParams.get('userEmail') || "Not Provided";
+        const messageData = urlParams.get('userMessage') || "No text written.";
+
+        // Inject data tokens into corresponding output container positions safely
+        document.getElementById('out-name').textContent = nameData;
+        document.getElementById('out-email').textContent = emailData;
+        document.getElementById('out-msg').textContent = messageData;
+    </script>
+
+</body>
+</html>
