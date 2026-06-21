@@ -2,33 +2,29 @@ function getDay() {
 
     let day = Number(document.getElementById("dayInput").value);
 
-    let result = "";
-
     switch(day) {
         case 1:
-            result = "Monday";
+            document.getElementById("result").innerHTML = "Monday";
             break;
         case 2:
-            result = "Tuesday";
+            document.getElementById("result").innerHTML = "Tuesday";
             break;
         case 3:
-            result = "Wednesday";
+            document.getElementById("result").innerHTML = "Wednesday";
             break;
         case 4:
-            result = "Thursday";
+            document.getElementById("result").innerHTML = "Thursday";
             break;
         case 5:
-            result = "Friday";
+            document.getElementById("result").innerHTML = "Friday";
             break;
         case 6:
-            result = "Saturday";
+            document.getElementById("result").innerHTML = "Saturday";
             break;
         case 7:
-            result = "Sunday";
+            document.getElementById("result").innerHTML = "Sunday";
             break;
         default:
-            result = "Invalid Input";
+            document.getElementById("result").innerHTML = "Invalid Input";
     }
-
-    document.getElementById("result").innerHTML = result;
 }
