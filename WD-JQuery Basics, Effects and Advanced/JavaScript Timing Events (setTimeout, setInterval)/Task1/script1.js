@@ -1,11 +1,13 @@
-setTimeout(() => {
+alert("JS Loaded");
 
-    document.body.classList.remove("bg-light");
-    document.body.classList.add("bg-primary");
+setTimeout(function() {
 
-    document.getElementById("heading").innerText = "Color Changed!";
+    alert("5 seconds completed");
 
-    document.getElementById("heading").classList.remove("text-dark");
-    document.getElementById("heading").classList.add("text-white");
+    document.body.style.backgroundColor = "blue";
+
+    document.getElementById("heading").innerHTML = "Color Changed!";
+
+    document.getElementById("heading").style.color = "white";
 
 }, 5000);
