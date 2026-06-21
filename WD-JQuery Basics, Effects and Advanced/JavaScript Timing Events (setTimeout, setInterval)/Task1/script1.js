@@ -6,10 +6,6 @@ setTimeout(function() {
     document.getElementById("heading").style.color =
         "white";
 
-    document.body.style.setProperty(
-        "background-color",
-        "blue",
-        "important"
-    );
+    document.body.style.backgroundColor = "#0d6efd";
 
 }, 5000);
