@@ -6,33 +6,26 @@ const arrayDisplay = document.getElementById("arrayDisplay");
 const addBtn = document.getElementById("addBtn");
 const removeBtn = document.getElementById("removeBtn");
 
-// Update Display Function
+// Function to Update Display
 function updateDisplay() {
     arrayDisplay.textContent = JSON.stringify(fruits);
 }
 
-// Add Orange
+// Show Initial Array
+updateDisplay();
+
+// Add Orange to End
 addBtn.addEventListener("click", function () {
-
     fruits.push("orange");
-
     updateDisplay();
-
 });
 
 // Remove First Fruit
 removeBtn.addEventListener("click", function () {
-
     if (fruits.length > 0) {
-
         fruits.shift();
-
         updateDisplay();
-
     } else {
-
         arrayDisplay.textContent = "[] Array is Empty";
-
     }
-
 });
