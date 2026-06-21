@@ -1,31 +1,31 @@
 // Initial Array
 let fruits = ["apple", "banana", "cherry"];
 
-// Get HTML Elements
+// Get Elements
 const arrayDisplay = document.getElementById("arrayDisplay");
 const addBtn = document.getElementById("addBtn");
 const removeBtn = document.getElementById("removeBtn");
 
-// Function to Update Display
+// Display Function
 function updateDisplay() {
-    arrayDisplay.textContent = JSON.stringify(fruits);
+    arrayDisplay.innerHTML = JSON.stringify(fruits);
 }
 
-// Show Initial Array
+// Initial Display
 updateDisplay();
 
-// Add Orange to End
-addBtn.addEventListener("click", function () {
+// Add Orange
+addBtn.onclick = function () {
     fruits.push("orange");
     updateDisplay();
-});
+};
 
 // Remove First Fruit
-removeBtn.addEventListener("click", function () {
+removeBtn.onclick = function () {
     if (fruits.length > 0) {
         fruits.shift();
         updateDisplay();
     } else {
-        arrayDisplay.textContent = "[] Array is Empty";
+        arrayDisplay.innerHTML = "Array is Empty";
     }
-});
+};
