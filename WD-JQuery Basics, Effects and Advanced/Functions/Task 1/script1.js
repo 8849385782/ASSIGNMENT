@@ -1,3 +1,13 @@
-function handleGreet() {
-    alert(document.getElementById("userName").value);
+function handleGreet(){
+
+    const userName =
+        document.getElementById("userName").value;
+
+    if(userName.trim() === ""){
+        alert("Please enter your name!");
+        return;
+    }
+
+    document.getElementById("displayGreeting").innerHTML =
+        `Hello, ${userName}!`;
 }
