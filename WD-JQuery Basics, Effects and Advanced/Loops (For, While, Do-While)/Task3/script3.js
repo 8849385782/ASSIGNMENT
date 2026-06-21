@@ -4,7 +4,6 @@ const submitBtn = document.getElementById("submitBtn");
 
 const logList = document.getElementById("logList");
 
-// Add logs
 function addLog(text, success = false){
 
     const li = document.createElement("li");
@@ -16,7 +15,6 @@ function addLog(text, success = false){
     logList.appendChild(li);
 }
 
-// Wait for input
 function waitForInput(){
 
     return new Promise(resolve => {
@@ -32,10 +30,8 @@ function waitForInput(){
         };
 
     });
-
 }
 
-// Do-While Loop
 (async function runLoop(){
 
     let number;
@@ -53,14 +49,12 @@ function waitForInput(){
         else if(number <= 10){
 
             addLog(`Loop continues because ${number} is not greater than 10.`);
-
         }
 
     }while(isNaN(number) || number <= 10);
 
     addLog(`Success! ${number} is greater than 10.`, true);
 
-    // Disable after success
     userInput.disabled = true;
     submitBtn.disabled = true;
 
