@@ -1,8 +1,4 @@
-alert("JS Loaded");
-
 setTimeout(function() {
-
-    alert("5 seconds completed");
 
     const heading = document.getElementById("heading");
 
@@ -10,6 +6,6 @@ setTimeout(function() {
 
     heading.style.color = "white";
 
-    document.body.style.backgroundColor = "blue";
+    document.body.style.background = "blue";
 
 }, 5000);
