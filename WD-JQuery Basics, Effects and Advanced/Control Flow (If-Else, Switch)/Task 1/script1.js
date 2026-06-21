@@ -1,40 +1,27 @@
 function checkNumber() {
 
-    const input = document.getElementById("userInput").value.trim();
+    let input = document.getElementById("userInput").value;
 
-    const display = document.getElementById("result");
+    let arr = input.split(",");
 
-    const card = document.getElementById("mainCard");
+    let output = "";
 
-    if (input === "") {
-        display.innerHTML = "Please enter numbers";
-        return;
-    }
+    for(let i = 0; i < arr.length; i++) {
 
-    const numbers = input.split(",");
+        let num = Number(arr[i]);
 
-    let result = "";
-
-    card.classList.remove("positive-border", "negative-border");
-
-    for (let i = 0; i < numbers.length; i++) {
-
-        let num = Number(numbers[i].trim());
-
-        if (num > 0) {
-            result += num + " is Positive Integer<br>";
-            card.classList.add("positive-border");
+        if(num > 0) {
+            output += num + " is Positive<br>";
         }
 
-        else if (num < 0) {
-            result += num + " is Negative Integer<br>";
-            card.classList.add("negative-border");
+        else if(num < 0) {
+            output += num + " is Negative<br>";
         }
 
         else {
-            result += num + " is Zero<br>";
+            output += num + " is Zero<br>";
         }
     }
 
-    display.innerHTML = result;
+    document.getElementById("result").innerHTML = output;
 }
