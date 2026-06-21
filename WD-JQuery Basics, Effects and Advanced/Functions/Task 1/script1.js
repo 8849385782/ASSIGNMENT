@@ -1,15 +1,13 @@
 function handleGreet() {
 
-    let userName =
-        document.getElementById("userName").value;
+    let name = document.getElementById("userName").value;
 
-    if (userName.trim() === "") {
-
-        alert("Please enter your name!");
-
+    if(name === "") {
+        document.getElementById("displayGreeting").innerHTML =
+            "Please enter your name";
         return;
     }
 
     document.getElementById("displayGreeting").innerHTML =
-        "Hello, " + userName + "!";
+        "Hello, " + name + "!";
 }
