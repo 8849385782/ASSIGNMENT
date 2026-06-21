@@ -1,61 +1,34 @@
 const userInput = document.getElementById("userInput");
-
 const submitBtn = document.getElementById("submitBtn");
-
 const logList = document.getElementById("logList");
 
-function addLog(text, success = false){
+submitBtn.onclick = function () {
 
-    const li = document.createElement("li");
+    let number = parseFloat(userInput.value);
 
-    li.textContent = "• " + text;
+    let li = document.createElement("li");
 
-    li.className = success ? "success" : "error";
+    if (isNaN(number)) {
+
+        li.textContent = "Invalid input";
+
+    } else if (number <= 10) {
+
+        li.textContent =
+            "Loop continues because " + number +
+            " is not greater than 10.";
+
+    } else {
+
+        li.textContent =
+            "Success! " + number +
+            " is greater than 10.";
+
+        userInput.disabled = true;
+        submitBtn.disabled = true;
+    }
 
     logList.appendChild(li);
-}
 
-function waitForInput(){
-
-    return new Promise(resolve => {
-
-        submitBtn.onclick = () => {
-
-            const value = parseFloat(userInput.value);
-
-            userInput.value = "";
-
-            resolve(value);
-
-        };
-
-    });
-}
-
-(async function runLoop(){
-
-    let number;
-
-    do{
-
-        number = await waitForInput();
-
-        if(isNaN(number)){
-
-            addLog("Invalid input. Please enter a valid number.");
-
-        }
-
-        else if(number <= 10){
-
-            addLog(`Loop continues because ${number} is not greater than 10.`);
-        }
-
-    }while(isNaN(number) || number <= 10);
-
-    addLog(`Success! ${number} is greater than 10.`, true);
-
-    userInput.disabled = true;
-    submitBtn.disabled = true;
-
-})();
+    userInput.value = "";
+};
