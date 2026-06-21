@@ -1,11 +1,13 @@
 setTimeout(function() {
 
-    const heading = document.getElementById("heading");
+    document.body.classList.remove("bg-light");
 
-    heading.textContent = "Color Changed!";
+    document.body.classList.add("bg-primary");
 
-    heading.style.color = "white";
+    document.getElementById("heading").textContent =
+        "Color Changed!";
 
-    document.body.style.background = "blue";
+    document.getElementById("heading").style.color =
+        "white";
 
 }, 5000);
