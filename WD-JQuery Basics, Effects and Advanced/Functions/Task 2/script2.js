@@ -1,4 +1,4 @@
-function calculateSum() {
+function handleCalculation() {
 
     let num1 = Number(document.getElementById("num1").value);
 
@@ -7,5 +7,5 @@ function calculateSum() {
     let sum = num1 + num2;
 
     document.getElementById("result").innerHTML =
-        `Result: ${sum}`;
+        "Result: " + sum;
 }
