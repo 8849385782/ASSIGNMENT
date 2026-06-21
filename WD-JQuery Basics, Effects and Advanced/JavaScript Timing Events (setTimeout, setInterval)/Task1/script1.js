@@ -1,13 +1,15 @@
 setTimeout(function() {
 
-    document.body.classList.remove("bg-light");
-
-    document.body.classList.add("bg-primary");
-
-    document.getElementById("heading").textContent =
+    document.getElementById("heading").innerHTML =
         "Color Changed!";
 
     document.getElementById("heading").style.color =
         "white";
+
+    document.body.style.setProperty(
+        "background-color",
+        "blue",
+        "important"
+    );
 
 }, 5000);
