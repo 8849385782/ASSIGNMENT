@@ -1,26 +1,15 @@
-// Function to show greeting
-function handleGreet(){
+function handleGreet() {
 
-    // Get entered name
-    const userName =
-        document.getElementById(
-            "userName"
-        ).value;
+    let userName =
+        document.getElementById("userName").value;
 
-    // Check empty input
-    if(userName.trim() === ""){
+    if (userName.trim() === "") {
 
-        alert(
-            "Please enter your name!"
-        );
+        alert("Please enter your name!");
 
         return;
     }
 
-    // Display Greeting
-    document.getElementById(
-        "displayGreeting"
-    ).innerHTML =
-        `Hello, ${userName}!`;
-
+    document.getElementById("displayGreeting").innerHTML =
+        "Hello, " + userName + "!";
 }
